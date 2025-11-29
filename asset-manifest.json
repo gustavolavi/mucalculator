@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/mucalculator/static/css/main.a537cb84.css",
-    "main.js": "/mucalculator/static/js/main.40d2168f.js",
+    "main.js": "/mucalculator/static/js/main.97d32bc5.js",
     "index.html": "/mucalculator/index.html",
     "main.a537cb84.css.map": "/mucalculator/static/css/main.a537cb84.css.map",
-    "main.40d2168f.js.map": "/mucalculator/static/js/main.40d2168f.js.map"
+    "main.97d32bc5.js.map": "/mucalculator/static/js/main.97d32bc5.js.map"
   },
   "entrypoints": [
     "static/css/main.a537cb84.css",
-    "static/js/main.40d2168f.js"
+    "static/js/main.97d32bc5.js"
   ]
 }
