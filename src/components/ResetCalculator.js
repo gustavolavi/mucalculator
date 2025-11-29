@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { calculateResetCost } from '../utils/resetCosts';
+import { useDebounce } from '../hooks/useDebounce';
 import '../styles/ResetCalculator.css';
 
 export default function ResetCalculator() {
   const [currentReset, setCurrentReset] = useState(0);
   const [targetReset, setTargetReset] = useState(1);
+  // valor controlado livre para o input do target (string) para permitir digitação
+  const [targetInput, setTargetInput] = useState(String(1));
   const [playerType, setPlayerType] = useState('free');
   const [result, setResult] = useState(null);
 
@@ -14,21 +17,49 @@ export default function ResetCalculator() {
     setResult(costData);
   }, [currentReset, targetReset, playerType]);
 
+  // Sincroniza targetInput quando targetReset muda (por validação externa)
+  useEffect(() => {
+    setTargetInput(String(targetReset));
+  }, [targetReset]);
+
   const handleCurrentResetChange = (e) => {
     const value = Math.max(0, Math.min(999, parseInt(e.target.value) || 0));
     setCurrentReset(value);
     if (value >= targetReset) {
-      setTargetReset(value + 1);
+      const newTarget = value + 1;
+      setTargetReset(newTarget);
+      setTargetInput(String(newTarget));
     }
   };
 
+  // Atualiza o campo do input livremente (string) — validação acontece com debounce
   const handleTargetResetChange = (e) => {
-    const value = Math.max(
-      currentReset + 1,
-      Math.min(1000, parseInt(e.target.value) || currentReset + 1)
-    );
-    setTargetReset(value);
+    // permite string vazia enquanto digita
+    setTargetInput(e.target.value);
   };
+
+  // Debounce para validar o valor digitado e aplicar a mudança ao estado real
+  useDebounce(
+    () => {
+      const raw = targetInput.trim();
+      const parsed = parseInt(raw, 10);
+
+      if (!raw || Number.isNaN(parsed)) {
+        // Se vazio ou inválido, ajusta para mínimo válido
+        const minVal = Math.min(1000, currentReset + 1);
+        setTargetReset(minVal);
+        setTargetInput(String(minVal));
+        return;
+      }
+
+      // Clampa entre currentReset+1 e 1000
+      const clamped = Math.max(currentReset + 1, Math.min(1000, parsed));
+      setTargetReset(clamped);
+      setTargetInput(String(clamped));
+    },
+    600,
+    [targetInput, currentReset]
+  );
 
   const formatNumber = (num) => {
     if (typeof num === 'string') return num;
@@ -74,10 +105,10 @@ export default function ResetCalculator() {
   };
 
   const renderJoiasDetails = (joiasObj) => {
-    const entries = Object.entries(joiasObj);
-    if (entries.length === 0) {
+    if (!joiasObj || Object.keys(joiasObj).length === 0) {
       return <span className="joias-none">Nenhuma</span>;
     }
+    const entries = Object.entries(joiasObj);
     return (
       <div className="joias-details">
         {entries.map(([type, qty]) => (
@@ -91,10 +122,8 @@ export default function ResetCalculator() {
   };
 
   const formatJoiasSimple = (joiasObj) => {
+    if (!joiasObj || Object.keys(joiasObj).length === 0) return 'Nenhuma';
     const entries = Object.entries(joiasObj);
-    if (entries.length === 0) {
-      return 'Nenhuma';
-    }
     return entries
       .map(([type, qty]) => `${qty} ${formatJoiaName(type)}`)
       .join(' + ');
@@ -120,10 +149,8 @@ export default function ResetCalculator() {
         <div className="reset-input-group">
           <label>Reset Objetivo:</label>
           <input
-            type="number"
-            min={currentReset + 1}
-            max="1000"
-            value={targetReset}
+            type="text"
+            value={targetInput}
             onChange={handleTargetResetChange}
             className="reset-input"
           />
@@ -222,7 +249,7 @@ export default function ResetCalculator() {
                               {formatZen(detail.zenVip)}
                             </td>
                             <td className="joias-vip">
-                              {formatJoiasSimple(detail.jiasVip)}
+                              {formatJoiasSimple(detail.joiasVip)}
                             </td>
                           </>
                         )}

@@ -20,7 +20,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 50000,
     zenVip: 50000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 2,
@@ -28,7 +28,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 90000,
     zenVip: 70000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 11,
@@ -36,7 +36,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 100000,
     zenVip: 90000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 21,
@@ -44,7 +44,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 150000,
     zenVip: 100000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 31,
@@ -52,7 +52,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 200000,
     zenVip: 100000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 51,
@@ -60,7 +60,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 300000,
     zenVip: 200000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 71,
@@ -68,7 +68,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 400000,
     zenVip: 300000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 101,
@@ -76,7 +76,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 2000000,
     zenVip: 1000000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 151,
@@ -84,7 +84,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 4000000,
     zenVip: 2000000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 201,
@@ -92,7 +92,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 6000000,
     zenVip: 3500000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 251,
@@ -100,7 +100,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 10000000,
     zenVip: 8000000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 301,
@@ -108,7 +108,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 12000000,
     zenVip: 10000000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 351,
@@ -116,7 +116,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 15000000,
     zenVip: 11000000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 401,
@@ -124,7 +124,7 @@ export const RESET_COSTS_TABLE = [
     zenFree: 18000000,
     zenVip: 12000000,
     joiasFree: NO_GEMS,
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 451,
@@ -150,7 +150,7 @@ export const RESET_COSTS_TABLE = [
     joiasFree: {
       bless: 1,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 600,
@@ -161,7 +161,7 @@ export const RESET_COSTS_TABLE = [
       bless: 1,
       soul: 1,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 650,
@@ -172,7 +172,7 @@ export const RESET_COSTS_TABLE = [
       bless: 2,
       creation: 2,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 700,
@@ -184,7 +184,7 @@ export const RESET_COSTS_TABLE = [
       soul: 2,
       life: 2,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 750,
@@ -196,7 +196,7 @@ export const RESET_COSTS_TABLE = [
       soul: 3,
       life: 5,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 800,
@@ -208,7 +208,7 @@ export const RESET_COSTS_TABLE = [
       soul: 7,
       chaos: 7,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 820,
@@ -220,7 +220,7 @@ export const RESET_COSTS_TABLE = [
       soul: 7,
       chaos: 7,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 850,
@@ -232,7 +232,7 @@ export const RESET_COSTS_TABLE = [
       chaos: 7,
       creation: 7,
     },
-    jiasVip: NO_GEMS,
+    joiasVip: NO_GEMS,
   },
   {
     resetStart: 900,
@@ -245,7 +245,7 @@ export const RESET_COSTS_TABLE = [
       soul: 20,
       life: 12,
     },
-    jiasVip: {
+    joiasVip: {
       bless: 20,
       chaos: 20,
       soul: 20,
@@ -263,7 +263,7 @@ export const RESET_COSTS_TABLE = [
       soul: 20,
       life: 20,
     },
-    jiasVip: {
+    joiasVip: {
       fortunaDoImperador: 6,
       creation: 15,
       soul: 15,
@@ -305,7 +305,7 @@ export function getResetCost(resetNumber, playerType = 'free') {
   );
 
   if (!row) {
-    return { zenFree: 0, zenVip: 0, joiasFree: NO_GEMS, jiasVip: NO_GEMS };
+    return { zenFree: 0, zenVip: 0, joiasFree: NO_GEMS, joiasVip: NO_GEMS };
   }
 
   return row;
@@ -346,13 +346,13 @@ export function calculateResetCost(
     totalZenFree += cost.zenFree;
     totalZenVip += cost.zenVip;
     joiasFreeLists.push(cost.joiasFree);
-    joiasVipLists.push(cost.jiasVip);
+    joiasVipLists.push(cost.joiasVip);
     details.push({
       reset,
       zenFree: cost.zenFree,
       zenVip: cost.zenVip,
       joiasFree: cost.joiasFree,
-      jiasVip: cost.jiasVip,
+      joiasVip: cost.joiasVip,
     });
   }
 
