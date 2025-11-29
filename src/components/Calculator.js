@@ -128,6 +128,11 @@ function Calculator() {
         [attribute]: numValue,
       };
       setDistribution(newDistribution);
+      // Atualiza o total correspondente (initial + novo distribuído)
+      const initialValue =
+        CLASSES[selectedClass].initialAttributes[attribute] || 0;
+      const newTotal = initialValue + numValue;
+      setTotalInputs((prev) => ({ ...prev, [attribute]: newTotal }));
       // Salva automaticamente com debounce
       if (result) {
         saveBuildAutomatically(level, resets, newDistribution);
